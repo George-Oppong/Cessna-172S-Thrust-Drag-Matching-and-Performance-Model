@@ -4,7 +4,8 @@ Author: George Oppong Wiafe·
 Contact:georgekyekyeku@gmail.com 
 Status: Undergraduate project
 
-What this project does
+**What this project does**
+
 Models the aircraft. ISA atmosphere, parabolic drag polar, and a fixed-pitch propeller power model, with every parameter traced to a source (see Sources).
 Finds the minimum-drag speed three ways: an analytical closed form, gradient descent, and differential evolution.
 Validates against the POH: cruise power (37 table rows), maximum speed, rate of climb at seven altitudes, service ceiling, and best glide.
