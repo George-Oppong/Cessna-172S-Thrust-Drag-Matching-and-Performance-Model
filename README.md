@@ -42,3 +42,11 @@ Method	Error in V_md	Function evaluations
 Analytical	exact	0
 Gradient descent (4 starting points)	< 3×10⁻⁷ m/s	37–51
 Differential evolution	5×10⁻⁵ m/s	225
+
+
+Sources
+Cessna Aircraft Company, Cessna 172S Pilot's Operating Handbook, Rev 5, 2004: geometry, engine, stall speed (Fig 5-3), climb (Fig 5-6), cruise (Fig 5-8).
+S. Min, E. Harrison, H. Jimenez, D. Mavris, "Development of Aerodynamic Modeling and Calibration Methods for General Aviation Aircraft Performance Analysis – A Survey and Comparison of Models," AIAA 2015-2853: CD0 = 0.0344 and e = 0.7469 for the C172S.
+Harada, Validation of Classical Aircraft Performance Methods Using Flight Test Data from a Cessna 172S, M.S. thesis, The Ohio State University [year]: build-up and simulator drag parameters, Lycoming WOT power line (Fig 15), propeller efficiency (Eq. 84).
+U.S. Standard Atmosphere, 1976, NASA-TM-X-74335.
+S. Gudmundsson, General Aviation Aircraft Design: Applied Methods and Procedures, 2013: Gagg–Farrar power lapse (cross-check only).
