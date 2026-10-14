@@ -2,9 +2,9 @@
 
 A Python performance model of the Cessna 172S that computes drag and available thrust across speed and altitude, solves for the minimum-drag speed three different ways, and checks the model against the aircraft's Pilot's Operating Handbook (POH).
 
-**Author:** [George Oppong Wiafe] · **Contact:** [georgekyekyeku@gmail.com] · **Status:** complete (undergraduate project)
+**Author:** George Oppong Wiafe · **Contact:** georgekyekyeku@gmail.com · **Status:** Undergraduate project
 
-![Thrust-drag matching](thrust_drag_matching.png)
+![Thrust-drag matching](Thrustdragplt.png)
 
 ## What this project does
 
@@ -17,7 +17,7 @@ A Python performance model of the Cessna 172S that computes drag and available t
 
 **Atmosphere.** US Standard Atmosphere 1976, troposphere (density from ISA temperature and pressure).
 
-**Drag.** `D = ½ρV²S (CD0 + k CL²)`, with `CL = W / (½ρV²S)` and `k = 1/(π·AR·e)`.
+**Drag.** D = ½ρV²S(CD0 + k CL²), with CL = W/(½ρV²S) and k = 1/(π·AR·e).
 
 **Minimum drag (analytical).** Setting `dD/dV = 0` gives `CD0 = k·CL²`, so
 
@@ -25,7 +25,7 @@ A Python performance model of the Cessna 172S that computes drag and available t
 - `V_md = √(2W / (ρ·S·CL_md))`
 - `D_min = 2W·√(CD0·k)`, which does not depend on altitude. Only the speed at which it occurs changes with density.
 
-**Propulsion.** `P_avail = η(J) · BHP_WOT(h) · RPM/2700`, thrust = `P_avail / V`.
+**Propulsion.** P_avail = η(J) · BHP_WOT(h) · RPM/2700, thrust = P_avail / V.
 
 - Wide-open-throttle power falls linearly from 180 hp at sea level to 80 hp at 20,000 ft (Lycoming chart, as reproduced by Harada).
 - Propeller efficiency η(J) is Harada's Eq. 84, a regression to X-Plane simulator output (no measured curve for this propeller was found).
@@ -108,6 +108,6 @@ This prints the three tables above and writes `thrust_drag_matching.png` and `va
 
 - Cessna Aircraft Company, *Cessna 172S Pilot's Operating Handbook*, Rev 5, 2004: geometry, engine, stall speed (Fig 5-3), climb (Fig 5-6), cruise (Fig 5-8).
 - S. Min, E. Harrison, H. Jimenez, D. Mavris, "Development of Aerodynamic Modeling and Calibration Methods for General Aviation Aircraft Performance Analysis – A Survey and Comparison of Models," AIAA 2015-2853: CD0 = 0.0344 and e = 0.7469 for the C172S.
-- Harada, *Validation of Classical Aircraft Performance Methods Using Flight Test Data from a Cessna 172S*, M.S. thesis, The Ohio State University [year]: build-up and simulator drag parameters, Lycoming WOT power line (Fig 15), propeller efficiency (Eq. 84).
+- Harada, *Validation of Classical Aircraft Performance Methods Using Flight Test Data from a Cessna 172S*, M.S. thesis, The Ohio State University,2026: build-up and simulator drag parameters, Lycoming WOT power line (Fig 15), propeller efficiency (Eq. 84).
 - *U.S. Standard Atmosphere, 1976*, NASA-TM-X-74335.
-- S. Gudmundsson, *General Aviation Aircraft Design: Applied Methods and Procedures*, 2013: Gagg–Farrar power lapse (cross-check only).
+- S. Gudmundsson, *General Aviation Aircraft Design: Applied Methods and Procedures*, 2013: Gagg–Farrar power lapse.
