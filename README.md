@@ -67,7 +67,7 @@ The problem is smooth with a single minimum, so the closed form is exact and nee
 | 8,000 | 408 | 499 | +5.3 kW |
 | 12,000 | 221 | 316 | +5.5 kW |
 
-![Validation](validation.png)
+![Validation](Validation.png)
 
 ### 3. Why climb is overpredicted
 
