@@ -21,9 +21,9 @@ A Python performance model of the Cessna 172S that computes drag and available t
 
 **Minimum drag (analytical).** Setting `dD/dV = 0` gives `CD0 = k·CL²`, so
 
-- `CL_md = √(CD0/k)`
-- `V_md = √(2W / (ρ·S·CL_md))`
-- `D_min = 2W·√(CD0·k)`, which does not depend on altitude. Only the speed at which it occurs changes with density.
+- CL_md = √(CD0/k)
+- V_md = √(2W / (ρ·S·CL_md))
+- D_min = 2W·√(CD0·k), which does not depend on altitude. Only the speed at which it occurs changes with density.
 
 **Propulsion.** P_avail = η(J) · BHP_WOT(h) · RPM/2700, thrust = P_avail / V.
 
