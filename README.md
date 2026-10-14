@@ -93,16 +93,15 @@ Propeller efficiency is the dominant uncertainty. No single drag parameter set m
 - Constant-torque and linear-RPM assumptions for full-throttle power (A1, A2 in the script header).
 - Climb speeds are treated as equivalent airspeed (no instrument or compressibility correction).
 - The drag parameters are published estimates for the type, not measurements on a specific aircraft. Published values for CD0 range from about 0.021 to 0.046 depending on method.
-- The Gagg–Farrar power-lapse formula used as a cross-check was written from recall and has not been verified against its source.
+
 
 ## Run it
 
 ```bash
 pip install numpy scipy matplotlib
-python thrust_drag_matching.py
+python GeorgeThrust-DragMatching.py
 ```
 
-This prints the three tables above and writes `thrust_drag_matching.png` and `validation.png` in the folder you run it from.
 
 ## Sources
 
