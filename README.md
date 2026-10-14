@@ -13,6 +13,24 @@ A Python performance model of the Cessna 172S that computes drag and available t
 3. **Validates against the POH:** cruise power (37 table rows), maximum speed, rate of climb at seven altitudes, service ceiling, and best glide.
 4. **Tests sensitivity** to the parameters that are not well known.
 
+## Assumptions 
+
+In a fixed-pitch propeller aircraft, the pilot doesn’t set the RPM at full throttle. The RPM settles wherever the engine’s torque balances the propeller’s torque, and that changes with airspeed. I had no propeller torque data for this aircraft, so I used two simple approximations.
+
+Linear-RPM assumption (A1).
+
+On the ground at full throttle, the POH says the engine turns only 2300–2400 RPM, because the propeller is heavily loaded.
+As the aircraft speeds up, the propeller unloads and RPM climbs, reaching about 2700 near top speed.
+I assumed it rises in a straight line from 2350 (static) to 2700 at 126 kt.
+Example: at the 74 kt climb speed, the model’s RPM is about 2555.
+
+Constant-torque assumption (A2).
+
+Engine power equals torque × rotational speed. If torque stays roughly constant at full throttle, power is proportional to RPM.
+So at 2555 RPM the engine delivers about 95% of the power it would at 2700 RPM, which is why the power formula contains RPM/2700.
+
+
+
 ## Method
 
 **Atmosphere.** US Standard Atmosphere 1976, troposphere (density from ISA temperature and pressure).
@@ -90,7 +108,7 @@ Propeller efficiency is the dominant uncertainty. No single drag parameter set m
 ## Limitations
 
 - Propeller efficiency η(J) comes from a simulator regression, not measured data for this propeller.
-- Constant-torque and linear-RPM assumptions for full-throttle power (A1, A2 in the script header).
+- Constant-torque and linear-RPM assumptions for full-throttle power (A1, A2 ).
 - Climb speeds are treated as equivalent airspeed (no instrument or compressibility correction).
 - The drag parameters are published estimates for the type, not measurements on a specific aircraft. Published values for CD0 range from about 0.021 to 0.046 depending on method.
 
